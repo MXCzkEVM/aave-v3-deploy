@@ -61,6 +61,19 @@ export default {
   },
   networks: {
     hardhat: hardhatNetworkSettings,
+    wannsee: {
+      saveDeployments: true,
+      chainId: 5167003,
+      url:  "http://140.82.17.124:8545",
+      live: false,
+      timeout: 120000000,
+      accounts: {
+        mnemonic: process.env.mnemonic || "",
+        path: "m/44'/60'/0'/0",
+        initialIndex: 0,
+        count: 10,
+      },
+    },
     localhost: {
       url: "http://127.0.0.1:8545",
       ...hardhatNetworkSettings,

@@ -5,6 +5,7 @@ import {
   eEthereumNetwork,
   eFantomNetwork,
   eHarmonyNetwork,
+  eMXCNetwork,
   eOptimismNetwork,
   ePolygonNetwork,
 } from "./types";
@@ -137,6 +138,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
+  [eMXCNetwork.wannsee]: "0xd1153a00561e0a8086aA82580Baa2258a6130A6f"
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -147,6 +149,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
+  [eMXCNetwork.wannsee]: "0xd1153a00561e0a8086aA82580Baa2258a6130A6f"
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {

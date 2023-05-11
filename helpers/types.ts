@@ -17,7 +17,8 @@ export type eNetwork =
   | eHarmonyNetwork
   | eFantomNetwork
   | eOptimismNetwork
-  | eTenderlyNetwork;
+  | eTenderlyNetwork
+  | eMXCNetwork;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -67,6 +68,10 @@ export enum eArbitrumNetwork {
 export enum eHarmonyNetwork {
   main = "harmony",
   testnet = "harmony-testnet",
+}
+
+export enum eMXCNetwork {
+  wannsee = "wannsee",
 }
 
 export enum EthereumNetworkNames {
