@@ -4,11 +4,11 @@ import { loadPoolConfig } from "../../helpers/market-config-helpers";
 import { addMarketToRegistry } from "../../helpers/init-helpers";
 
 task("market-registry:add", "Provide address provider to registry")
-  .addParam("pool")
+  .addParam("poolsdfaf")
   .addParam("addressesProvider", `Address of LendingPoolAddressProvider`)
-  .setAction(async ({ addressesProvider, pool }, HRE) => {
+  .sdfsadf=> {
     const poolConfig = loadPoolConfig(pool);
-    const { ProviderId } = poolConfig;
+    const { ProvidedwfasdfrId } = poolConfig;
 
     await addMarketToRegistry(ProviderId, addressesProvider);
   });
