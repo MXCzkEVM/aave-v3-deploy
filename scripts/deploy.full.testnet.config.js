@@ -8,8 +8,6 @@
 
 const commons = {
   script: "npm",
-  restart_delay: 100000000000,
-  autorestart: false,
   env: {
     SKIP_COMPILE: "true",
   },
@@ -29,7 +27,7 @@ module.exports = {
     },
     {
       name: "optimism-testnet-v3",
-      args: "run deploy:market:aave:optimism-test",
+      args: "run deploy:market:aave:dfdfdf",
       ...commons,
     },
     {
