@@ -2,20 +2,20 @@ import {
   DETERMINISTIC_DEPLOYMENT,
   DETERMINISTIC_FACTORIES,
   ETHERSCAN_KEY,
-  getCommonNetworkConfig,
+  // getCommonNetworkConfig,
   hardhatNetworkSettings,
   loadTasks,
 } from "./helpers/hardhat-config-helpers";
-import {
-  eArbitrumNetwork,
-  eAvalancheNetwork,
-  eEthereumNetwork,
-  eFantomNetwork,
-  eHarmonyNetwork,
-  eOptimismNetwork,
-  ePolygonNetwork,
-  eTenderly,
-} from "./helpers/types";
+// import {
+//   eArbitrumNetwork,
+//   eAvalancheNetwork,
+//   eEthereumNetwork,
+//   eFantomNetwork,
+//   eHarmonyNetwork,
+//   eOptimismNetwork,
+//   ePolygonNetwork,
+//   eTenderly,
+// } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
 import "@nomicfoundation/hardhat-toolbox";
@@ -64,7 +64,7 @@ export default {
     wannsee: {
       saveDeployments: true,
       chainId: 5167003,
-      url:  "http://140.82.17.124:8545",
+      url: "http://140.82.17.124:8545",
       live: false,
       timeout: 120000000,
       accounts: {
@@ -78,62 +78,62 @@ export default {
       url: "http://127.0.0.1:8545",
       ...hardhatNetworkSettings,
     },
-    tenderly: getCommonNetworkConfig("tenderly", 3030),
-    main: getCommonNetworkConfig(eEthereumNetwork.main, 1),
-    kovan: getCommonNetworkConfig(eEthereumNetwork.kovan, 42),
-    rinkeby: getCommonNetworkConfig(eEthereumNetwork.rinkeby, 4),
-    ropsten: getCommonNetworkConfig(eEthereumNetwork.ropsten, 3),
-    [ePolygonNetwork.polygon]: getCommonNetworkConfig(
-      ePolygonNetwork.polygon,
-      137
-    ),
-    [ePolygonNetwork.mumbai]: getCommonNetworkConfig(
-      ePolygonNetwork.mumbai,
-      80001
-    ),
-    arbitrum: getCommonNetworkConfig(eArbitrumNetwork.arbitrum, 42161),
-    [eArbitrumNetwork.arbitrumTestnet]: getCommonNetworkConfig(
-      eArbitrumNetwork.arbitrumTestnet,
-      421611
-    ),
-    [eHarmonyNetwork.main]: getCommonNetworkConfig(
-      eHarmonyNetwork.main,
-      1666600000
-    ),
-    [eHarmonyNetwork.testnet]: getCommonNetworkConfig(
-      eHarmonyNetwork.testnet,
-      1666700000
-    ),
-    [eAvalancheNetwork.avalanche]: getCommonNetworkConfig(
-      eAvalancheNetwork.avalanche,
-      43114
-    ),
-    [eAvalancheNetwork.fuji]: getCommonNetworkConfig(
-      eAvalancheNetwork.fuji,
-      43113
-    ),
-    [eFantomNetwork.main]: getCommonNetworkConfig(eFantomNetwork.main, 250),
-    [eFantomNetwork.testnet]: getCommonNetworkConfig(
-      eFantomNetwork.testnet,
-      4002
-    ),
-    [eOptimismNetwork.testnet]: getCommonNetworkConfig(
-      eOptimismNetwork.testnet,
-      420
-    ),
-    [eOptimismNetwork.main]: getCommonNetworkConfig(eOptimismNetwork.main, 10),
-    [eEthereumNetwork.goerli]: getCommonNetworkConfig(
-      eEthereumNetwork.goerli,
-      5
-    ),
-    [eEthereumNetwork.sepolia]: getCommonNetworkConfig(
-      eEthereumNetwork.sepolia,
-      11155111
-    ),
-    [eArbitrumNetwork.goerliNitro]: getCommonNetworkConfig(
-      eArbitrumNetwork.goerliNitro,
-      421613
-    ),
+    // tenderly: getCommonNetworkConfig("tenderly", 3030),
+    // main: getCommonNetworkConfig(eEthereumNetwork.main, 1),
+    // kovan: getCommonNetworkConfig(eEthereumNetwork.kovan, 42),
+    // rinkeby: getCommonNetworkConfig(eEthereumNetwork.rinkeby, 4),
+    // ropsten: getCommonNetworkConfig(eEthereumNetwork.ropsten, 3),
+    // [ePolygonNetwork.polygon]: getCommonNetworkConfig(
+    //   ePolygonNetwork.polygon,
+    //   137
+    // ),
+    // [ePolygonNetwork.mumbai]: getCommonNetworkConfig(
+    //   ePolygonNetwork.mumbai,
+    //   80001
+    // ),
+    // arbitrum: getCommonNetworkConfig(eArbitrumNetwork.arbitrum, 42161),
+    // [eArbitrumNetwork.arbitrumTestnet]: getCommonNetworkConfig(
+    //   eArbitrumNetwork.arbitrumTestnet,
+    //   421611
+    // ),
+    // [eHarmonyNetwork.main]: getCommonNetworkConfig(
+    //   eHarmonyNetwork.main,
+    //   1666600000
+    // ),
+    // [eHarmonyNetwork.testnet]: getCommonNetworkConfig(
+    //   eHarmonyNetwork.testnet,
+    //   1666700000
+    // ),
+    // [eAvalancheNetwork.avalanche]: getCommonNetworkConfig(
+    //   eAvalancheNetwork.avalanche,
+    //   43114
+    // ),
+    // [eAvalancheNetwork.fuji]: getCommonNetworkConfig(
+    //   eAvalancheNetwork.fuji,
+    //   43113
+    // ),
+    // [eFantomNetwork.main]: getCommonNetworkConfig(eFantomNetwork.main, 250),
+    // [eFantomNetwork.testnet]: getCommonNetworkConfig(
+    //   eFantomNetwork.testnet,
+    //   4002
+    // ),
+    // [eOptimismNetwork.testnet]: getCommonNetworkConfig(
+    //   eOptimismNetwork.testnet,
+    //   420
+    // ),
+    // [eOptimismNetwork.main]: getCommonNetworkConfig(eOptimismNetwork.main, 10),
+    // [eEthereumNetwork.goerli]: getCommonNetworkConfig(
+    //   eEthereumNetwork.goerli,
+    //   5
+    // ),
+    // [eEthereumNetwork.sepolia]: getCommonNetworkConfig(
+    //   eEthereumNetwork.sepolia,
+    //   11155111
+    // ),
+    // [eArbitrumNetwork.goerliNitro]: getCommonNetworkConfig(
+    //   eArbitrumNetwork.goerliNitro,
+    //   421613
+    // ),
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,

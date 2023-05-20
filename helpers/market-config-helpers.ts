@@ -86,8 +86,7 @@ export const getAddressFromConfig = (
   );
   if (!value || !isValidAddress(value)) {
     throw Error(
-      `[aave-v3-deploy] Input parameter ${
-        key ? `"${key}"` : ""
+      `[aave-v3-deploy] Input parameter ${key ? `"${key}"` : ""
       } is missing or is not an address.`
     );
   }
