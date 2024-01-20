@@ -62,7 +62,7 @@ To make it work, you must install the following packages in your project:
 ```
 npm i --save-dev @aave/deploy-v3 @aave/core-v3 @aave/periphery-v3
 ```
-
+在相应的包里修改一下incentiveERC20合约，然后正常执行向下部署命令即可
 Then, proceed to load the deploy scripts adding the `externals` field in your Hardhat config file at `hardhat.config.js|ts`.
 
 ```
