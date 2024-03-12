@@ -202,6 +202,9 @@ export const initReservesByHelper = async (
   // Deploy init reserves per chunks
   const chunkedSymbols = chunk(reserveSymbols, initChunks);
   const chunkedInitInputParams = chunk(initInputParams, initChunks);
+  console.log("--------------------------")
+  console.log(chunkedInitInputParams)
+  console.log("--------------------------")
 
   const proxyArtifact = await hre.deployments.get(POOL_CONFIGURATOR_PROXY_ID);
   const configuratorArtifact = await hre.deployments.get(
@@ -387,6 +390,11 @@ export const configureReservesByHelper = async (
     const poolConfiguratorAddress = await addressProvider.getPoolConfigurator();
 
     console.log(`- Configure reserves in ${chunkedInputParams.length} txs`);
+
+    console.log("--------------------------")
+    console.log(chunkedInputParams)
+    console.log("--------------------------")
+
     for (
       let chunkIndex = 0;
       chunkIndex < chunkedInputParams.length;

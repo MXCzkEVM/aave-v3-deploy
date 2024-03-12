@@ -22,27 +22,34 @@ const func: DeployFunction = async function ({
   ) as eNetwork;
   const poolConfig = loadPoolConfig(MARKET_NAME as ConfigNames);
 
-  let wrappedNativeTokenAddress;
+  // // Local networks that are not live or testnet, like hardhat network, will deploy a WETH9 contract as mockup for testing deployments
+  // if (isTestnetMarket(poolConfig)) {
+  //   wrappedNativeTokenAddress = (
+  //     await deployments.get(
+  //       `${poolConfig.WrappedNativeTokenSymbol}${TESTNET_TOKEN_PREFIX}`
+  //     )
+  //   ).address;
+  // } else {
+  //   if (!WRAPPED_NATIVE_TOKEN_PER_NETWORK[network]) {
+  //     throw `Missing Wrapped native token for network: ${network}, fill the missing configuration at ./helpers/constants.ts`;
+  //   }
+  //   wrappedNativeTokenAddress = WRAPPED_NATIVE_TOKEN_PER_NETWORK[network];
+  // }
 
-  // Local networks that are not live or testnet, like hardhat network, will deploy a WETH9 contract as mockup for testing deployments
-  if (isTestnetMarket(poolConfig)) {
-    wrappedNativeTokenAddress = (
-      await deployments.get(
-        `${poolConfig.WrappedNativeTokenSymbol}${TESTNET_TOKEN_PREFIX}`
-      )
-    ).address;
-  } else {
-    if (!WRAPPED_NATIVE_TOKEN_PER_NETWORK[network]) {
-      throw `Missing Wrapped native token for network: ${network}, fill the missing configuration at ./helpers/constants.ts`;
-    }
-    wrappedNativeTokenAddress = WRAPPED_NATIVE_TOKEN_PER_NETWORK[network];
+  if (!WRAPPED_NATIVE_TOKEN_PER_NETWORK[network]) {
+    throw `Missing Wrapped native token for network: ${network}, fill the missing configuration at ./helpers/constants.ts`;
   }
+  const wrappedNativeTokenAddress = WRAPPED_NATIVE_TOKEN_PER_NETWORK[network];
+  console.log(`wrappedNativeTokenAddress: ${wrappedNativeTokenAddress}`)
 
   const { address: poolAddress } = await deployments.get(POOL_PROXY_ID);
 
+  const gasPrice = (await hre.ethers.provider.getGasPrice()).mul(2);
+  // console.log(gasPrice, "gasPrice")
   await deploy("WrappedTokenGatewayV3", {
     from: deployer,
     args: [wrappedNativeTokenAddress, deployer, poolAddress],
+    gasPrice
   });
 };
 

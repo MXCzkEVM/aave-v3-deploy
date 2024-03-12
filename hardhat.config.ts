@@ -16,6 +16,7 @@ import {
 //   ePolygonNetwork,
 //   eTenderly,
 // } from "./helpers/types";
+import { eMXCNetwork, eLocal } from './helpers/types'
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
 import "@nomicfoundation/hardhat-toolbox";
@@ -26,6 +27,7 @@ import "@nomicfoundation/hardhat-chai-matchers";
 
 const SKIP_LOAD = process.env.SKIP_LOAD === "true";
 const TASK_FOLDERS = ["misc", "market-registry"];
+const PRIVATE__00 = process.env.PRIVATE__00
 
 // Prevent to load tasks before compilation and typechain
 if (!SKIP_LOAD) {
@@ -60,24 +62,42 @@ export default {
     target: "ethers-v5",
   },
   networks: {
-    hardhat: hardhatNetworkSettings,
-    wannsee: {
+    // hardhat: hardhatNetworkSettings,
+    [eLocal.hardhat]: {
+      chainId: 31337,
+      gasPrice: 6000000000000,
+      live: false,
+      saveDeployments: true,
+    },
+    [eLocal.ganache]: {
+      url: "http://127.0.0.1:7545",
+      chainId: 1337,
+      live: false,
+      saveDeployments: true,
+    },
+    [eMXCNetwork.wannsee]: {
       saveDeployments: true,
       chainId: 5167003,
-      url: "http://140.82.17.124:8545",
-      live: false,
+      url: "http://207.246.99.8:8545",
+      // url: "https://wannsee-rpc.mxc.com",
       timeout: 120000000,
-      accounts: {
-        mnemonic: process.env.mnemonic || "",
-        path: "m/44'/60'/0'/0",
-        initialIndex: 0,
-        count: 10,
-      },
+      // accounts: {
+      //   mnemonic: process.env.mnemonic || "",
+      //   path: "m/44'/60'/0'/0",
+      //   initialIndex: 0,
+      //   count: 10,
+      // },
+      accounts: [process.env.PRIVATE]
     },
-    localhost: {
-      url: "http://127.0.0.1:8545",
-      ...hardhatNetworkSettings,
+    [eMXCNetwork.mainnet]: {
+      // url: "https://rpc.mxc.com",
+      url: "http://207.246.101.30:8545",
+      chainId: 18686,
+      accounts: [PRIVATE__00],
+      saveDeployments: true,
+      gasPrice: 60 * 10000 * 1000000000,
     },
+
     // tenderly: getCommonNetworkConfig("tenderly", 3030),
     // main: getCommonNetworkConfig(eEthereumNetwork.main, 1),
     // kovan: getCommonNetworkConfig(eEthereumNetwork.kovan, 42),

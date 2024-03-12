@@ -1,0 +1,16 @@
+{
+  "PoolAddressesProviderRegistry": 1695882502,
+  "LogicLibraries": 1695882506,
+  "Treasury": 1695882508,
+  "PoolAddressesProvider:Aave:aave-v3-core@1.17.1": 1695882652,
+  "MockPriceAggregators:Aave:aave-v3-core@1.17.1": 1695882656,
+  "PoolConfigurator": 1695882658,
+  "ACLManager:Aave:aave-v3-core@1.17.1": 1695882659,
+  "Oracles:Aave:aave-v3-core@1.17.1": 1695882660,
+  "InitOracles:Aave:aave-v3-core@1.17.1": 1695882660,
+  "PoolInitalization:Aave:aave-v3-core@1.17.1": 1695882661,
+  "Incentives:Aave:aave-v3-periphery@1.23.1": 1695882664,
+  "TokenImplementations:Aave:aave-v3-core@1.17.1": 1695882668,
+  "ReservesInit:Aave:aave-v3-core@1.17.1": 1695882677,
+  "PeripheryInit:Aave:aave-v3-periphery@1.23.1": 1695882677
+}

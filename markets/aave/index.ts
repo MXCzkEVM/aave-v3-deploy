@@ -33,9 +33,9 @@ export const AaveMarket: IAaveConfiguration = {
   ReservesConfig: {
     DAI: strategyDAI,
     LINK: strategyLINK,
+    WETH: strategyWETH,
     USDC: strategyUSDC,
     WBTC: strategyWBTC,
-    WETH: strategyWETH,
     USDT: strategyUSDT,
     AAVE: strategyAAVE,
     EURS: strategyEURS,

@@ -18,7 +18,8 @@ export type eNetwork =
   | eFantomNetwork
   | eOptimismNetwork
   | eTenderlyNetwork
-  | eMXCNetwork;
+  | eMXCNetwork
+  | eLocal;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -72,6 +73,13 @@ export enum eHarmonyNetwork {
 
 export enum eMXCNetwork {
   wannsee = "wannsee",
+  mainnet = "wannsee-mainnet",
+}
+
+
+export enum eLocal {
+  hardhat = "hardhat",
+  ganache = "ganache"
 }
 
 export enum EthereumNetworkNames {
@@ -384,7 +392,7 @@ export enum TokenContractId {
 
 export interface IReserveParams
   extends IReserveBorrowParams,
-    IReserveCollateralParams {
+  IReserveCollateralParams {
   aTokenImpl: eContractid;
   reserveFactor: string;
   supplyCap: string;
@@ -437,8 +445,8 @@ export type iParamsPerNetworkWithDefault<T> = {
 
 export interface iParamsPerNetworkAll<T>
   extends iEthereumParamsPerNetwork<T>,
-    iPolygonParamsPerNetwork<T>,
-    iXDaiParamsPerNetwork<T> {}
+  iPolygonParamsPerNetwork<T>,
+  iXDaiParamsPerNetwork<T> { }
 
 export interface iEthereumParamsPerNetwork<T> {
   [eEthereumNetwork.kovan]: T;
@@ -539,7 +547,7 @@ export interface IBaseConfiguration {
   RateStrategies: IStrategy;
 }
 
-export interface ICommonConfiguration extends IBaseConfiguration {}
+export interface ICommonConfiguration extends IBaseConfiguration { }
 
 export interface IAaveConfiguration extends ICommonConfiguration {
   //ReservesConfig: iAavePoolAssets<IReserveParams>;

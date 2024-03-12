@@ -54,6 +54,9 @@
   "license": "AGPLv3",
   "scripts": {
     "run-env": "npm ci && tail -f /dev/null",
+    "get-address": "hh run scripts/getAddress.js --network ganache",
+    "get-address-wannsee": "hh run scripts/getAddress.js --network wannsee",
+    "get-address-mainnet": "hh run scripts/getAddress.js --network wannsee-mainnet",
     "cp-typechain": "cp typechain/*.d.ts ./dist/types/typechain",
     "build": "tsc --project lib.tsconfig.json && npm run cp-typechain",
     "clean": "rm -rf artifacts/ types/ dist/ typechain/",
@@ -65,9 +68,12 @@
     "test": "npm run compile && npm run test:fork",
     "test:fork": "MARKET_NAME=Aave FORK=main npx hardhat test ./tests/__setup.spec.ts ./tests/fork/check-list.spec.ts",
     "test:ethereum:fork": "TRANSFER_OWNERSHIP=true  FORK=main MARKET_NAME=Ethereum npx hardhat test ./tests/ethereum/ethereum.*.spec.ts",
+    "deploy-ganache": "npx hardhat deploy --network ganache",
+    "deploy-wannsee": "npx hardhat deploy --network wannsee",
+    "deploy-wannsee-mainnet": "npx hardhat deploy --network wannsee-mainnet",
+    "deploy:market:aave:hardhat": "npx hardhat deploy --network hardhat",
     "deploy:market:aave:fork": "FORK=main MARKET_NAME=Aave npm run deploy",
-    "deploy:market:eth:empty:fork": "FORK=main MARKET_NAME=Ethereum npm run deploy",
-    "deploy:market:aave:wannsee": "npx hardhat deploy --network wannsee"
+    "deploy:market:eth:empty:fork": "FORK=main MARKET_NAME=Ethereum npm run deploy"
   },
   "peerDependencies": {
     "@aave/core-v3": "x || >=1.0.0-beta || >=3.0.0-beta",

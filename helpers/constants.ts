@@ -8,6 +8,7 @@ import {
   eMXCNetwork,
   eOptimismNetwork,
   ePolygonNetwork,
+  eLocal,
 } from "./types";
 
 const {
@@ -46,6 +47,9 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eFantomNetwork.main]: "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
   [eHarmonyNetwork.main]: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
   [ePolygonNetwork.polygon]: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+  [eLocal.ganache]: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  [eMXCNetwork.wannsee]: "0x6807F4B0D75c59Ef89f0dbEF9841Fb23fFDF105D",
+  [eMXCNetwork.mainnet]: "0xcBCE60BAD702026d6385E5f449e44099A655d14f",
 };
 
 export const ZERO_BYTES_32 =
@@ -99,7 +103,9 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x6c60d915c7a646860dba836ffcb7f112b6cfdc76",
-  [eMXCNetwork.wannsee]: "0xca156A2D75c5E5d9Eea903A723FE8B94f0D6bbcF", // ETH/USD price feed
+  [eMXCNetwork.wannsee]: "0xCc91385c7Dee8e65e7365C6EE9655Ed740da9595", // mxc/usd price feed
+  [eMXCNetwork.mainnet]: "0x778734507c2D2d1aD59bEaB46dE167ae81935E84", // mxc/usd price feed
+  [eLocal.ganache]: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
 };
 
 export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
@@ -123,7 +129,9 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x6c60d915c7a646860dba836ffcb7f112b6cfdc76",
-  [eMXCNetwork.wannsee]: "0xca156A2D75c5E5d9Eea903A723FE8B94f0D6bbcF",
+  [eMXCNetwork.wannsee]: "0xCc91385c7Dee8e65e7365C6EE9655Ed740da9595",
+  [eMXCNetwork.mainnet]: "0x778734507c2D2d1aD59bEaB46dE167ae81935E84",
+  [eLocal.ganache]: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
 };
 
 export const ETHEREUM_SHORT_EXECUTOR =
@@ -140,7 +148,9 @@ export const POOL_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
-  [eMXCNetwork.wannsee]: "0xd1153a00561e0a8086aA82580Baa2258a6130A6f",
+  [eMXCNetwork.wannsee]: "0x45A83F015D0265800CBC0dACe1c430E724D49cAc",
+  [eMXCNetwork.mainnet]: "0x4faBD45F69D907aC3a3941c34f466A6EFf44bAcA",
+  [eLocal.ganache]: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -151,7 +161,9 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
-  [eMXCNetwork.wannsee]: "0xd1153a00561e0a8086aA82580Baa2258a6130A6f",
+  [eMXCNetwork.wannsee]: "0x45A83F015D0265800CBC0dACe1c430E724D49cAc",
+  [eMXCNetwork.mainnet]: "0x4faBD45F69D907aC3a3941c34f466A6EFf44bAcA",
+  [eLocal.ganache]: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {
