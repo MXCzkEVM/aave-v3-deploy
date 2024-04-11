@@ -72,8 +72,8 @@ export enum eHarmonyNetwork {
 }
 
 export enum eMXCNetwork {
-  wannsee = "wannsee",
-  mainnet = "wannsee-mainnet",
+  geneva = "geneva",
+  mainnet = "mainnet",
 }
 
 

@@ -75,11 +75,11 @@ export default {
       live: false,
       saveDeployments: true,
     },
-    [eMXCNetwork.wannsee]: {
+    [eMXCNetwork.geneva]: {
       saveDeployments: true,
-      chainId: 5167003,
+      chainId: 5167004,
       url: "http://207.246.99.8:8545",
-      // url: "https://wannsee-rpc.mxc.com",
+      // url: "https://geneva-rpc.mxc.com",
       timeout: 120000000,
       // accounts: {
       //   mnemonic: process.env.mnemonic || "",
