@@ -78,8 +78,7 @@ export default {
     [eMXCNetwork.geneva]: {
       saveDeployments: true,
       chainId: 5167004,
-      url: "http://207.246.99.8:8545",
-      // url: "https://geneva-rpc.mxc.com",
+      url: "http://144.202.111.198:8545",
       timeout: 120000000,
       // accounts: {
       //   mnemonic: process.env.mnemonic || "",

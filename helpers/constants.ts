@@ -103,7 +103,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x6c60d915c7a646860dba836ffcb7f112b6cfdc76",
-  [eMXCNetwork.geneva]: "0xCc91385c7Dee8e65e7365C6EE9655Ed740da9595", // mxc/usd price feed
+  [eMXCNetwork.geneva]: "0x057fFfF842143811040ddfbC6977ec1d534207d1", // mxc/usd price feed
   [eMXCNetwork.mainnet]: "0x778734507c2D2d1aD59bEaB46dE167ae81935E84", // mxc/usd price feed
   [eLocal.ganache]: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
 };
@@ -129,7 +129,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x6c60d915c7a646860dba836ffcb7f112b6cfdc76",
-  [eMXCNetwork.geneva]: "0xCc91385c7Dee8e65e7365C6EE9655Ed740da9595",
+  [eMXCNetwork.geneva]: "0x057fFfF842143811040ddfbC6977ec1d534207d1",
   [eMXCNetwork.mainnet]: "0x778734507c2D2d1aD59bEaB46dE167ae81935E84",
   [eLocal.ganache]: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
 };
@@ -148,7 +148,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
-  [eMXCNetwork.geneva]: "0x45A83F015D0265800CBC0dACe1c430E724D49cAc",
+  [eMXCNetwork.geneva]: "0x0795D90c6d60F7c77041862E9aE5059B4d5e0d7A",
   [eMXCNetwork.mainnet]: "0x4faBD45F69D907aC3a3941c34f466A6EFf44bAcA",
   [eLocal.ganache]: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 };
@@ -161,7 +161,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
-  [eMXCNetwork.geneva]: "0x45A83F015D0265800CBC0dACe1c430E724D49cAc",
+  [eMXCNetwork.geneva]: "0x0795D90c6d60F7c77041862E9aE5059B4d5e0d7A",
   [eMXCNetwork.mainnet]: "0x4faBD45F69D907aC3a3941c34f466A6EFf44bAcA",
   [eLocal.ganache]: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 };

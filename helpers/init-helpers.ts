@@ -443,11 +443,7 @@ export const addMarketToRegistry = async (
   const signer = await hre.ethers.getSigner(providerRegistryOwner);
 
   // 1. Set the provider at the Registry
-  await waitForTx(
-    await providerRegistryInstance
-      .connect(signer)
-      .registerAddressesProvider(addressesProvider, providerId)
-  );
+  await waitForTx(await providerRegistryInstance.connect(signer).registerAddressesProvider(addressesProvider, providerId));
   console.log(
     `Added LendingPoolAddressesProvider with address "${addressesProvider}" to registry located at ${providerRegistry.address}`
   );
