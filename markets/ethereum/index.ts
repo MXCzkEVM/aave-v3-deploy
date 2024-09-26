@@ -8,18 +8,17 @@ import { AaveMarket } from "../aave/index";
 export const EthereumV3Market: IAaveConfiguration = {
   ...AaveMarket,
   ProviderId: 30,
-  WrappedNativeTokenSymbol: "WETH",
+  WrappedNativeTokenSymbol: "WMXC",
   MarketId: "Aave Ethereum Market",
   ATokenNamePrefix: "Ethereum",
-  StableDebtTokenNamePrefix: "Ethereum",
-  VariableDebtTokenNamePrefix: "Ethereum",
+  StableDebtTokenNamedsfasdf
   SymbolPrefix: "Eth",
   ReserveAssets: {},
   ChainlinkAggregator: {},
   ReservesConfig: {},
   EModes: {},
   ReserveFactorTreasuryAddress: {
-    [eEthereumNetwork.main]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
+    [eEthereumNetwork.main]: "0x46dd4c71f6c2f760dda6093dcb91c24c39e5d6e18c",
   },
 };
 
